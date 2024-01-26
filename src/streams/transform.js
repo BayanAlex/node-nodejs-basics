@@ -1,5 +1,9 @@
+import process from 'process';
+
 const transform = async () => {
-    // Write your code here 
+    process.stdin.on('data', (data) => {
+        process.stdout.write(data);
+    });
 };
 
 await transform();
