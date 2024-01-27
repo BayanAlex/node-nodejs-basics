@@ -7,7 +7,7 @@ const transform = async () => {
             callback(null, chunk.toString().split('').reverse().join(''));
         },
     });
-    reverseTransform.setEncoding('ascii');
+    reverseTransform.setEncoding('utf8');
     reverseTransform.on('data', chunck => process.stdout.write(chunck + '\n'));
 
     process.stdin.on('data', (data) => {
